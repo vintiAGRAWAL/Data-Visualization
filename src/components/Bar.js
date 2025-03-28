@@ -29,7 +29,7 @@ export const BarChart = () => {
         plugins: {
           title: {
             display: true,
-            text: "A Bar Chart",
+            text: "A Bar Chart Here",
           },
         },
       }}

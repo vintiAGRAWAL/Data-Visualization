@@ -46,7 +46,7 @@ export const BarChartData = {
 };
 
 export const PieChartData = {
-  labels: ["Vins", "Trins", "Dins", "Kins"],
+  labels: ["Vinss", "Trins", "Dins", "Kins"],
   datasets: [
     {
       label: "Time Spent",

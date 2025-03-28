@@ -33,7 +33,7 @@ export const LineGraph = () => {
       },
       title: {
         display: true,
-        text: "A Line Chart",
+        text: "A Line Chart Here",
       },
     },
   };

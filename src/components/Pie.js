@@ -12,7 +12,7 @@ export const PieChart = () => {
     plugins: {
       title: {
         display: true,
-        text: "A Pie Chart",
+        text: "A Pie Chart Here",
       },
     },
   };
