@@ -7,13 +7,13 @@ import { DraggableTable } from "./components/DraggableTable";
 function App() {
   return (
     <div className="Apps">
-      {/* <LineGraph />
+      <br />
+      <DraggableTable />
+      <LineGraph />
       <br />
       <BarChart />
       <br />
       <PieChart />
-      <br /> */}
-      <DraggableTable />
     </div>
   );
 }
