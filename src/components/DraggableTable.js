@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import { Column } from "./Column";
 import { DndContext } from "@dnd-kit/core";
-import { useDragDropContext, useDroppable, useDraggable } from "@dnd-kit/core";
 
 const Columns = [
-  { id: "TODO", title: "To Do", color: "text-red-500" },
-  { id: "IN_PROGRESS", title: "IN Progress", color: "text-yellow-500" },
-  { id: "DONE", title: "Done", color: "text-green-500" },
+  { id: "TODO", title: "To Do", color: "text-red-500", bgcolor: "bg-red-500" },
+  {
+    id: "IN_PROGRESS",
+    title: "IN Progress",
+    color: "text-yellow-500",
+    bgcolor: "bg-yellow-500",
+  },
+  {
+    id: "DONE",
+    title: "Done",
+    color: "text-green-500",
+    bgcolor: "bg-green-500",
+  },
 ];
 
 const Initial_Tasks = [
@@ -32,6 +41,17 @@ const Initial_Tasks = [
 
 export const DraggableTable = () => {
   const [tasks, setTasks] = useState(Initial_Tasks);
+
+  const handleAddTask = (columnId, title, desc) => {
+    const newTask = {
+      id: Date.now().toString(),
+      title,
+      desc,
+      status: columnId,
+    };
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+  };
+
   const handleDragEnd = (event) => {
     const { active, over } = event;
     if (!over) {
@@ -62,6 +82,7 @@ export const DraggableTable = () => {
                 key={c.id}
                 column={c}
                 tasks={tasks.filter((task) => task.status === c.id)}
+                onAddTask={handleAddTask}
               />
             );
           })}
