@@ -4,9 +4,9 @@ import { DndContext } from "@dnd-kit/core";
 import { useDragDropContext, useDroppable, useDraggable } from "@dnd-kit/core";
 
 const Columns = [
-  { id: "TODO", title: "To Do" },
-  { id: "IN_PROGRESS", title: "IN Progress" },
-  { id: "DONE", title: "Done" },
+  { id: "TODO", title: "To Do", color: "text-red-500" },
+  { id: "IN_PROGRESS", title: "IN Progress", color: "text-yellow-500" },
+  { id: "DONE", title: "Done", color: "text-green-500" },
 ];
 
 const Initial_Tasks = [
