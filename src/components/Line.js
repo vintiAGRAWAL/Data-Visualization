@@ -33,10 +33,24 @@ export const LineGraph = () => {
       },
       title: {
         display: true,
-        text: "A Line Chart Here",
+        text: "Progress over the week by the team",
+        font: {
+          size: 20,
+          weight: "bold",
+          family: "Arial",
+        },
+        color: "rgba(0, 0, 0, 1)",
+        padding: {
+          top: 10,
+          bottom: 20,
+        },
       },
     },
   };
-  // const data = {  };
-  return <Line options={options} data={lineChartData} />;
+
+  return (
+    <div className="flex flex-col items-center w-full max-w-screen-lg">
+      <Line options={options} data={lineChartData} />
+    </div>
+  );
 };

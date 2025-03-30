@@ -11,8 +11,6 @@ import {
 
 import { BarChartData } from "../FAKE_DATA";
 
-//for rendering inside website
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -23,17 +21,29 @@ ChartJS.register(
 );
 export const BarChart = () => {
   return (
-    <Bar
-      options={{
-        responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: "A Bar Chart Here",
+    <div className="flex flex-col items-center w-full max-w-screen-lg">
+      <Bar
+        options={{
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Contribution from each team member",
+              font: {
+                size: 20,
+                weight: "bold",
+                family: "Arial",
+              },
+              color: "rgba(0, 0, 0, 1)",
+              padding: {
+                top: 10,
+                bottom: 20,
+              },
+            },
           },
-        },
-      }}
-      data={BarChartData}
-    />
+        }}
+        data={BarChartData}
+      />
+    </div>
   );
 };

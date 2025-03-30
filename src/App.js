@@ -6,14 +6,11 @@ import { DraggableTable } from "./components/DraggableTable";
 
 function App() {
   return (
-    <div className="Apps">
-      <br />
+    <div className="flex flex-col items-center w-full min-h-screen p-6">
       <DraggableTable />
       <LineGraph />
-      <br />
-      <BarChart />
-      <br />
       <PieChart />
+      <BarChart />
     </div>
   );
 }
