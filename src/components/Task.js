@@ -11,9 +11,10 @@ export const Task = ({ task }) => {
     : undefined;
 
   const statusColor = {
-    TODO: "bg-red-500",
+    TODO: "bg-purple-500",
     IN_PROGRESS: "bg-yellow-500",
-    DONE: "bg-green-600",
+    DONE: "bg-green-700",
+    Blocked: "bg-red-500",
   };
 
   return (
@@ -22,7 +23,7 @@ export const Task = ({ task }) => {
       {...listeners}
       {...attributes}
       className={`cursor-grab rounded-lg bg-neutral-700 p-4 shadow-sm hover:shadow-md ${
-        statusColor[task.status]
+        statusColor[task.status] || "bg-green-600"
       }`}
       style={style}
     >

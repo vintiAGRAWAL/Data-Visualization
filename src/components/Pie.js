@@ -12,9 +12,31 @@ export const PieChart = () => {
     plugins: {
       title: {
         display: true,
-        text: "A Pie Chart Here",
+        text: "Task Division Ratio",
+        font: {
+          size: 20,
+          weight: "bold",
+          family: "Arial",
+        },
+        color: "rgba(0, 0, 0, 1)",
+        padding: {
+          top: 10,
+          bottom: 20,
+        },
       },
     },
   };
-  return <Pie options={options} data={PieChartData} />;
+  return (
+    <div
+      className="flex flex-col items-center w-full max-w-screen-lg"
+      style={{
+        width: "600px",
+        height: "600px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <Pie options={options} data={PieChartData} />
+    </div>
+  );
 };

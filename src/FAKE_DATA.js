@@ -10,12 +10,12 @@ export const lineChartData = {
   ],
   datasets: [
     {
-      label: "Steps",
+      label: "This Week",
       data: [2000, 3000, 4000, 5000, 6000],
       borderColor: "rgb(75, 192, 192)",
     },
     {
-      label: "Steps by Me",
+      label: "Previous Week",
       data: [2000, 5000, 7000, 5000, 6000],
       borderColor: "rgb(192, 75, 77)",
     },
@@ -23,11 +23,11 @@ export const lineChartData = {
 };
 
 export const BarChartData = {
-  labels: ["Rent", "Groceries", "Utilities", "Transport"],
+  labels: ["Member1", "Member2", "Member3", "Member4"],
   datasets: [
     {
-      label: "Expenses",
-      data: [100, 40, 50, 80],
+      label: "Number of Tickets Closed",
+      data: [1, 2, 1, 1],
       backgroundColor: [
         "rgba(255, 99, 132, 0.6)",
         "rgba(3, 67, 126, 0.6)",
@@ -36,7 +36,7 @@ export const BarChartData = {
       ],
       borderColor: [
         "rgba(255, 99, 132, 1)",
-        "rgba(147, 216, 19, 1)",
+        "rgb(82, 58, 239)",
         "rgba(122, 99, 255, 1)",
         "rgba(230, 35, 181, 1)",
       ],
@@ -46,16 +46,16 @@ export const BarChartData = {
 };
 
 export const PieChartData = {
-  labels: ["Vinss", "Trins", "Dins", "Kins"],
+  labels: ["Completed", "In-Progress", "To-Start", "Blocked"],
   datasets: [
     {
-      label: "Time Spent",
-      data: [100, 40, 60, 70],
+      label: "Tasks Status",
+      data: [2, 3, 2, 1],
       backgroundColor: [
-        "rgba(255, 99, 132, 1)",
-        "rgba(147, 216, 19, 1)",
-        "rgba(122, 99, 255, 1)",
-        "rgba(230, 35, 181, 1)",
+        "rgb(5, 115, 25)",
+        "rgb(199, 167, 5)",
+        "rgb(205, 55, 254)",
+        "rgb(204, 8, 8)",
       ],
       hoverOffset: 4,
     },
