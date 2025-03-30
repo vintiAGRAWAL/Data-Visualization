@@ -13,7 +13,7 @@ export const Task = ({ task }) => {
   const statusColor = {
     TODO: "bg-red-500",
     IN_PROGRESS: "bg-yellow-500",
-    DONE: "bg-green-500",
+    DONE: "bg-green-600",
   };
 
   return (
@@ -22,7 +22,7 @@ export const Task = ({ task }) => {
       {...listeners}
       {...attributes}
       className={`cursor-grab rounded-lg bg-neutral-700 p-4 shadow-sm hover:shadow-md ${
-        statusColor[task.status] || "bg-gray-500"
+        statusColor[task.status]
       }`}
       style={style}
     >
