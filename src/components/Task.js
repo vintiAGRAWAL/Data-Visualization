@@ -10,12 +10,20 @@ export const Task = ({ task }) => {
       }
     : undefined;
 
+  const statusColor = {
+    TODO: "bg-red-500",
+    IN_PROGRESS: "bg-yellow-500",
+    DONE: "bg-green-600",
+  };
+
   return (
     <div
       ref={setNodeRef}
       {...listeners}
       {...attributes}
-      className="cursor-grab rounded-lg bg-neutral-700 p-4 shadow-sm hover:shadow-md"
+      className={`cursor-grab rounded-lg bg-neutral-700 p-4 shadow-sm hover:shadow-md ${
+        statusColor[task.status]
+      }`}
       style={style}
     >
       <h3 className="font-medium text-neutral-100">{task.title}</h3>
